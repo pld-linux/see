@@ -9,6 +9,7 @@ Source0:	http://www.adaptive-enterprises.com.au/~d/software/see/%{name}-%{versio
 # Source0-md5:	36795db813e5fcb2800142a48286624e
 URL:		http://www.adaptive-enterprises.com.au/~d/software/see
 BuildRequires:	gc-static
+BuildRequires:	perl-base
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
