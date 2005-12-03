@@ -1,3 +1,4 @@
+# TODO: use shared gc (or, if impossible, document why)
 Summary:	Simple ECMAScript Engine
 Summary(pl):	Prosty "silnik" ECMASscriptu
 Name:		see
@@ -48,13 +49,6 @@ Statyczna biblioteka SEE.
 %setup -q
 
 %build
-# if ac/am/lt/* rebuilding is necessary, do it in this order and add
-# appropriate BuildRequires
-#%{__libtoolize}
-#%{__aclocal}
-#%{__autoconf}
-#%{__autoheader}
-#%{__automake}
 %configure
 %{__make}
 
