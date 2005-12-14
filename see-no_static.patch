@@ -1,0 +1,16 @@
+--- see-1.2.orig/shell/Makefile.am	2004-10-16 16:05:25.000000000 +0200
++++ see-1.2/shell/Makefile.am	2005-12-14 21:53:41.587655000 +0100
+@@ -7,13 +7,6 @@
+ see_shell_LDADD=		$(top_builddir)/libsee/libsee.la
+ see_shell_DEPENDENCIES=		$(top_builddir)/libsee/libsee.la
+ 
+-## A statically linked version for running 'make check'
+-noinst_PROGRAMS=		see-shell.static
+-see_shell_static_SOURCES=	$(see_shell_SOURCES)
+-see_shell_static_LDADD=		$(see_shell_LDADD)
+-see_shell_static_DEPENDENCIES=	$(see_shell_DEPENDENCIES)
+-see_shell_static_LDFLAGS=	 -static
+-
+ #-- the following DEFS line tries to avoid the -I../include/see
+ DEFS = @DEFS@ -I. -I$(srcdir)
+ INCLUDES=			-I$(top_builddir)/include \
