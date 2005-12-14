@@ -1,4 +1,3 @@
-# TODO: use shared gc (or, if impossible, document why)
 Summary:	Simple ECMAScript Engine
 Summary(pl):	Prosty "silnik" ECMASscriptu
 Name:		see
@@ -8,8 +7,12 @@ License:	BSD-like
 Group:		Libraries
 Source0:	http://www.adaptive-enterprises.com.au/~d/software/see/%{name}-%{version}.tar.gz
 # Source0-md5:	36795db813e5fcb2800142a48286624e
+Patch0:		%{name}-no_static.patch
 URL:		http://www.adaptive-enterprises.com.au/~d/software/see
-BuildRequires:	gc-static
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool
+BuildRequires:	gc-devel
 BuildRequires:	perl-base
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -47,8 +50,13 @@ Statyczna biblioteka SEE.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
+%{__libtoolize}
+%{__aclocal}
+%{__autoconf}
+%{__automake}
 %configure
 %{__make}
 
