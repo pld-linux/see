@@ -29,6 +29,7 @@ Summary:	Header files for SEE library
 Summary(pl):	Pliki nag³ówkowe biblioteki SEE
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	gc-devel
 
 %description devel
 Header files for SEE library.
