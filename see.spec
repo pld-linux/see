@@ -8,8 +8,9 @@ Group:		Libraries
 Source0:	http://www.adaptive-enterprises.com.au/~d/software/see/%{name}-%{version}.tar.gz
 # Source0-md5:	36795db813e5fcb2800142a48286624e
 Patch0:		%{name}-no_static.patch
+Patch1:		%{name}-morearchs.patch
 URL:		http://www.adaptive-enterprises.com.au/~d/software/see
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	gc-devel
@@ -52,11 +53,13 @@ Statyczna biblioteka SEE.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
+%{__autoheader}
 %{__automake}
 %configure
 %{__make}
