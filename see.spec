@@ -1,14 +1,14 @@
 Summary:	Simple ECMAScript Engine
 Summary(pl):	Prosty "silnik" ECMASscriptu
 Name:		see
-Version:	1.2
+Version:	1.3
 Release:	2
 License:	BSD-like
 Group:		Libraries
 Source0:	http://www.adaptive-enterprises.com.au/~d/software/see/%{name}-%{version}.tar.gz
-# Source0-md5:	36795db813e5fcb2800142a48286624e
+# Source0-md5:	6c5de98435b5556765cdfe7bce8dda3d
 Patch0:		%{name}-no_static.patch
-Patch1:		%{name}-morearchs.patch
+#Patch1:		%{name}-morearchs.patch
 URL:		http://www.adaptive-enterprises.com.au/~d/software/see
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake
@@ -53,7 +53,7 @@ Statyczna biblioteka SEE.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
+#%patch1 -p1
 
 %build
 %{__libtoolize}
