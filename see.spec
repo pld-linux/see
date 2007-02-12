@@ -1,5 +1,5 @@
 Summary:	Simple ECMAScript Engine
-Summary(pl.UTF-8):   Prosty "silnik" ECMASscriptu
+Summary(pl.UTF-8):	Prosty "silnik" ECMASscriptu
 Name:		see
 Version:	2.0
 %define	subver	1131
@@ -27,7 +27,7 @@ ECMAScriptu (JavaScriptu).
 
 %package devel
 Summary:	Header files for SEE library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki SEE
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki SEE
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	gc-devel
@@ -40,7 +40,7 @@ Pliki nagłówkowe biblioteki SEE.
 
 %package static
 Summary:	Static SEE library
-Summary(pl.UTF-8):   Statyczna biblioteka SEE
+Summary(pl.UTF-8):	Statyczna biblioteka SEE
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
