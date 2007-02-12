@@ -1,5 +1,5 @@
 Summary:	Simple ECMAScript Engine
-Summary(pl):	Prosty "silnik" ECMASscriptu
+Summary(pl.UTF-8):   Prosty "silnik" ECMASscriptu
 Name:		see
 Version:	2.0
 %define	subver	1131
@@ -21,13 +21,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 SEE is a library that provides an ECMAScript (JavaScript)
 run-time environment.
 
-%description -l pl
-SEE jest bibliotek± udostêpniaj±c± ¶rodowisko uruchomieniowe
+%description -l pl.UTF-8
+SEE jest bibliotekÄ… udostÄ™pniajÄ…cÄ… Å›rodowisko uruchomieniowe
 ECMAScriptu (JavaScriptu).
 
 %package devel
 Summary:	Header files for SEE library
-Summary(pl):	Pliki nag³ówkowe biblioteki SEE
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki SEE
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	gc-devel
@@ -35,19 +35,19 @@ Requires:	gc-devel
 %description devel
 Header files for SEE library.
 
-%description devel -l pl
-Pliki nag³ówkowe biblioteki SEE.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe biblioteki SEE.
 
 %package static
 Summary:	Static SEE library
-Summary(pl):	Statyczna biblioteka SEE
+Summary(pl.UTF-8):   Statyczna biblioteka SEE
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static SEE library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka SEE.
 
 %prep
