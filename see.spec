@@ -1,3 +1,7 @@
+#
+# Conditional build:
+%bcond_without	static_libs	# don't build static library
+#
 Summary:	Simple ECMAScript Engine
 Summary(pl.UTF-8):	Prosty "silnik" ECMAScriptu
 Name:		see
@@ -59,7 +63,9 @@ Statyczna biblioteka SEE.
 %{__autoconf}
 %{__automake}
 %{__autoheader}
-%configure CPPFLAGS="$CPPFLAGS -I/usr/include/gc"
+%configure \
+	CPPFLAGS="$CPPFLAGS -I/usr/include/gc" \
+	%{!?with_static_libs:--disable-static}
 %{__make}
 
 %install
@@ -88,6 +94,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/lib*.la
 %{_includedir}/see
 
+%if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/lib*.a
+%endif
